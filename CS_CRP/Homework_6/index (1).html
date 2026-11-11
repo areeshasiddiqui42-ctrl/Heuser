@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEMORY.exe v1.0</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header class="game-header">
+      <h1>MEMORY<span class="cursor">_</span>.exe</h1>
+      <p class="instructions">
+        &gt; WATCH SEQUENCE. REPEAT PATTERN.<br>
+        &gt; USE MOUSE OR KEYS [1-4].
+      </p>
+    </header>
+
+    <section class="game-info" aria-live="polite">
+      <div class="score-board">
+        <div class="info-badge">LEVEL: <span id="level">0</span></div>
+        <div class="info-badge">HIGH SCORE: <span id="highscore">0</span></div>
+      </div>
+      <p id="status" class="status">&gt; SYSTEM READY_</p>
+    </section>
+
+    <section class="button-grid" aria-label="Colour controls">
+      <button class="colour-button red" id="red" data-colour="red" type="button" disabled>
+        RED <span class="key-hint">[1]</span>
+      </button>
+      <button class="colour-button blue" id="blue" data-colour="blue" type="button" disabled>
+        BLUE <span class="key-hint">[2]</span>
+      </button>
+      <button class="colour-button green" id="green" data-colour="green" type="button" disabled>
+        GREEN <span class="key-hint">[3]</span>
+      </button>
+      <button class="colour-button yellow" id="yellow" data-colour="yellow" type="button" disabled>
+        YELLOW <span class="key-hint">[4]</span>
+      </button>
+    </section>
+
+    <div class="game-controls">
+      <button id="start-button" class="control-button" type="button">&gt; START</button>
+      <button id="restart-button" class="control-button secondary" type="button" disabled>&gt; ABORT</button>
+      <button id="mute-button" class="control-button secondary" type="button">&gt; AUDIO: ON</button>
+      <button id="reset-data-button" class="control-button secondary" type="button" title="Clear saved high score">&gt; WIPE DATA</button>
+    </div>
+  </main>
+</body>
+</html>
